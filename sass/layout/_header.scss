@@ -1,0 +1,124 @@
+.header {
+    max-width: 100%;
+    margin: auto;
+    height: 9.8rem;
+    background-color: $brown-light;
+    border-bottom: 0.2rem solid $brown-medium;
+    z-index: 50;
+    position: relative;
+
+   &__center {  
+       position: relative;                  // header center
+       height: 9.8rem;
+       max-width: 60%;
+       margin: auto;
+   }
+
+   &--logo {                                       // header logo
+    display: inline-block;
+    position: absolute;
+    top: 3rem;
+
+    & img {                                          // header logo img
+        background-image: url(../../img/logo.png);
+        background-size: cover;
+        display: inline-block;
+        width: 14rem;
+    }
+   }
+
+   .list {              //first UL --->  header ul
+      
+       list-style: none;
+       display: flex;
+       flex-wrap: nowrap;
+       align-items: center;
+       justify-content: center;
+       
+       &--horizontal {                //  ul horizontal
+        position: absolute;
+        right: 0;
+        line-height: 2;
+        top: 4rem;
+       }
+       /////////////////////////////////////////////////////
+
+       &--item {                        // header ul--> li
+           border-radius: 0.4rem;
+           padding: 0.1rem;
+
+           &--highlighted {              // li highlighted
+               @include highlighted_li;
+           }
+           
+        
+        &-drop:hover .list__vertical {
+            display: inline-block;
+        }
+        &-drop2:hover  .list__vertical-right {
+            display: inline-block;
+        }
+           
+       }
+       ////////////////////////////////////////////////////////
+       &--link {
+           text-decoration: none;       // header ul --> li ---> a
+           padding: 0.6rem 1rem;
+           font-size: 1.4rem;
+           text-transform: uppercase;
+           color: $brown-text;
+           font-weight: 700;
+           border-radius: 0.4rem;
+
+           &:hover {                           //  header ul --> li ---> a  HOVER
+            background-color: $blue-light;
+            color: $brown-hover;
+            }
+
+            &-highlighted {
+                @include highlighted_a;
+            }
+        
+        }
+
+       &--search {                                          // header Search btn
+           display: flex;
+
+           & input {
+               display: none;
+               width: 6rem;
+           }
+           & i {
+               background-image: url(../../img/search_icon.png);
+               background-size: cover;
+               width: 2.5rem;
+               height: 2rem;
+               cursor: pointer;
+
+            
+           }
+       }
+       ////////////////////////////////////////////////////////////////////////
+       &__vertical {  
+            display: none;          // 2nd ul
+            position: absolute;
+            top: 3rem;
+            left: 4rem;
+            list-style: none;
+
+        
+        &-right {                      // 3rd ul 
+            display: none;
+            position: absolute;
+            width: 15rem;
+            left: 14rem;
+            top: 15rem;
+            list-style: none;
+        }
+
+        /////////////////////////////////////////////////////
+       }
+      ////////////////////// 
+   }
+   
+}

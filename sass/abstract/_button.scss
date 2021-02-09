@@ -1,0 +1,34 @@
+.button {
+    cursor: pointer;
+    background-color: transparent;
+   border: none;
+   position: relative;
+
+    
+    &__text-label {
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        border: 1px solid $brown-hover;
+        border-radius: 0.4rem;
+        font-weight: 700;
+        color: $brown-text;
+        
+        &:hover {
+   
+            border-radius: 0.4rem;
+            cursor: pointer;
+            background-color: $blue-light;
+            border:none;
+            color: $brown-light;
+           
+        }
+        
+    }
+    &__color-mdf {
+        color: white;
+    }
+    
+    
+    
+    
+}
