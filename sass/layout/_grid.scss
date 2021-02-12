@@ -1,0 +1,14 @@
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    border: 1px solid black
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+
+  .col-3 {width: 33.33%;}
+  .col-4 {width: 25%;}

@@ -1,34 +1,40 @@
-.button {
-    cursor: pointer;
+.btn {
+    border: 1px solid $grey-medium;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    padding: 1rem 2.5rem;
+    display: block;
+    margin: auto;
+    color: $grey-dark;
+    font-weight: 800;
+    font-size: 1.1rem;
     background-color: transparent;
-   border: none;
-   position: relative;
+    cursor: pointer;
 
-    
-    &__text-label {
-        text-transform: uppercase;
-        padding: 0.5rem 1rem;
-        border: 1px solid $brown-hover;
-        border-radius: 0.4rem;
-        font-weight: 700;
-        color: $brown-text;
-        
-        &:hover {
-   
-            border-radius: 0.4rem;
-            cursor: pointer;
-            background-color: $blue-light;
-            border:none;
-            color: $brown-light;
-           
-        }
-        
+    &:hover {
+        @include light;
     }
-    &__color-mdf {
-        color: white;
+    &--color {
+        @include light;
     }
-    
-    
-    
-    
+    &-dark {
+        background-color: $grey-section !important;
+    }
+    &-center {
+        position: absolute;
+        border: none;
+        bottom: 20.7%;
+        transform: translate(16%,0%);
+        background-color: $blue-light;
+        color: $grey-light;
+     
+    }
+    &-top {
+        position: relative;
+        bottom: 1.7rem;
+    }
+    &-bottom {
+        position: absolute;
+        bottom: 0rem;
+    }
 }

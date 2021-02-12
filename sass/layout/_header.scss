@@ -1,124 +1,110 @@
 .header {
     max-width: 100%;
-    margin: auto;
-    height: 9.8rem;
-    background-color: $brown-light;
-    border-bottom: 0.2rem solid $brown-medium;
-    z-index: 50;
-    position: relative;
+    background-color: $grey-light;
+    border-bottom: 0.2rem solid $grey-medium;
+
 
    &__center {  
        position: relative;                  // header center
        height: 9.8rem;
        max-width: 60%;
        margin: auto;
-   }
-
-   &--logo {                                       // header logo
-    display: inline-block;
-    position: absolute;
-    top: 3rem;
-
-    & img {                                          // header logo img
-        background-image: url(../../img/logo.png);
-        background-size: cover;
-        display: inline-block;
-        width: 14rem;
+       z-index: 100;
     }
-   }
 
-   .list {              //first UL --->  header ul
-      
-       list-style: none;
-       display: flex;
-       flex-wrap: nowrap;
-       align-items: center;
-       justify-content: center;
-       
-       &--horizontal {                //  ul horizontal
-        position: absolute;
-        right: 0;
-        line-height: 2;
-        top: 4rem;
+    &--logo {
+        display: inline-block;
+       position: absolute;
+       top: 25%;
+    }
+    @include clearfix;
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    transform: translate(0,-50%);
+    top: 50%;
+
+}
+
+.horizontal {
+    list-style: none;
+    
+    &--li {
+
+        float: left;   
+
+       &:nth-child(2):hover  .vertical{
+            visibility: visible;
        }
-       /////////////////////////////////////////////////////
+    }
 
-       &--item {                        // header ul--> li
-           border-radius: 0.4rem;
-           padding: 0.1rem;
-
-           &--highlighted {              // li highlighted
-               @include highlighted_li;
-           }
-           
-        
-        &-drop:hover .list__vertical {
-            display: inline-block;
+    &--a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $grey-text;
+        padding: 0.8rem 1rem;
+        font-size: 1.3rem;
+        border-radius: 0.4rem;
+        font-weight: 700;
+        &:hover {
+           @include light;
         }
-        &-drop2:hover  .list__vertical-right {
-            display: inline-block;
-        }
-           
-       }
-       ////////////////////////////////////////////////////////
-       &--link {
-           text-decoration: none;       // header ul --> li ---> a
-           padding: 0.6rem 1rem;
-           font-size: 1.4rem;
-           text-transform: uppercase;
-           color: $brown-text;
-           font-weight: 700;
-           border-radius: 0.4rem;
-
-           &:hover {                           //  header ul --> li ---> a  HOVER
+        &-highlighted {
             background-color: $blue-light;
-            color: $brown-hover;
-            }
-
-            &-highlighted {
-                @include highlighted_a;
-            }
+            color: $grey-light;
+       }
         
         }
+    
+    
+}
+///////////////////////////////////________________VERTICAL_________________////////////////////////////
+.vertical {
+    position: absolute;
+    background-color: $grey-light;
+    list-style: none;
+    top: 2.6rem;
+    visibility: hidden;
+    
+    &--li {
+     position: relative;
 
-       &--search {                                          // header Search btn
-           display: flex;
 
-           & input {
-               display: none;
-               width: 6rem;
-           }
-           & i {
-               background-image: url(../../img/search_icon.png);
-               background-size: cover;
-               width: 2.5rem;
-               height: 2rem;
-               cursor: pointer;
+     &:nth-child(6):hover .vertical-second{
+        visibility: visible;
+     }
+    }
 
-            
-           }
-       }
-       ////////////////////////////////////////////////////////////////////////
-       &__vertical {  
-            display: none;          // 2nd ul
-            position: absolute;
-            top: 3rem;
-            left: 4rem;
-            list-style: none;
+    &--a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $grey-text;
+        padding: 0.7rem 1rem;
+        font-size: 1.4rem;
+        border-radius: 0.4rem;
+        background-color: unset;
+        line-height: 2;
 
-        
-        &-right {                      // 3rd ul 
-            display: none;
-            position: absolute;
-            width: 15rem;
-            left: 14rem;
-            top: 15rem;
-            list-style: none;
+        &:hover {
+            background-color: $grey-medium;
+            color: $grey-light;
         }
+    }
 
-        /////////////////////////////////////////////////////
-       }
-      ////////////////////// 
-   }
-   
+    ////////////////////////////_____VERTICAL-SECOND______________/////////////////////////////////////
+    &-second {
+        visibility: hidden;
+        position: absolute;
+        left: 14.5rem;
+        width: 14.6rem;
+        list-style: none;
+        top: 0;
+        
+        & li:hover a {
+            background-color: $blue-light;
+            color: $grey-light;
+        }
+    }
 }
