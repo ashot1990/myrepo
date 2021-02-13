@@ -1,0 +1,22 @@
+.section__five {
+    text-align: center;
+
+
+    & .header--logo{
+    position: unset;
+    margin-top: 4rem;
+}
+}
+
+.icons-row {
+    position: relative;
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+    & span {
+        width: 4rem;
+        height: 4rem;
+        border: 1px solid $grey-light;
+        border-radius: 0.2rem;
+    }
+}

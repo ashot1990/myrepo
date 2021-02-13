@@ -1,0 +1,58 @@
+.section__four {
+
+    & ul {
+        list-style: none;
+        text-align: center;
+        border: 1px solid $grey-medium;
+        border-radius: 0.4rem;
+        height: 35rem;
+    
+        & li {
+            background-color: transparent !important;
+            padding: 0.5rem 0;
+            background-color: $grey-dark;
+            border-radius: 0.4rem 0.4rem 0 0;
+            position: relative;
+        }
+
+    }
+}
+.number {
+    display: inline-block;
+    margin-top: 3rem;
+    font-size: 5rem;
+    font-weight: 700;
+    position: relative;
+
+    &::before {
+        content: "$";
+        font-size: 1.4rem;
+        display: inline-block;
+        position: relative;
+        height: 1rem;
+    }
+    &::after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        width: 1rem;
+        height: 1rem;
+        background-color: #383838;
+        transform: rotate(45deg);
+        border-radius: 0.2rem;
+        right: 8rem;
+    }
+}
+.monthly {
+    display: inline-block;
+    font-size: 1.4rem;
+    position: relative;
+
+    &::before {
+        content: "99";
+        position: absolute;
+        bottom: 3rem;
+        right: 5rem;
+    }
+    
+}

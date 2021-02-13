@@ -1,0 +1,53 @@
+.section__two {
+
+    & ul {
+        list-style: none;
+        text-align: center;
+
+
+        & li {
+
+
+            & span {
+                font-size: 3rem;
+                color: $grey-light;
+            }
+
+            & img {
+                width: 1.5rem;
+                height: 1.5rem;
+                display: block;
+                margin: auto;                    
+            }
+
+            & p {
+                display: inline-block;
+                color: #999;
+                font-weight: 700;
+                font-size: 1.3rem;
+                text-align: center;
+                position: relative;
+                top: 1rem;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    border-bottom: 1px solid $grey-dark;
+                    position: absolute;
+                    width: 8.5rem;
+                    right: 7.5rem;
+                    bottom: 3.7rem;
+                }
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    border-bottom: 1px solid $grey-dark;
+                    position: absolute;
+                    width: 8.5rem;
+                    left: 7.5rem;
+                    bottom: 3.7rem;
+                }
+            }
+        }
+    }
+}

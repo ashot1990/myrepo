@@ -1,0 +1,112 @@
+.section__three {
+
+
+        
+    & ul {
+        list-style: none;
+        text-align: center;
+        border: 1px solid $grey-medium;
+        border-radius: 0.4rem;
+        
+        & .li-bg{
+            background-color: $blue-light !important;
+        }
+        & li:nth-child(1) {
+            height: 20rem;
+            background-color: $grey-dark;
+            border-radius: 0.4rem 0.4rem 0 0;
+           
+            
+            & span {
+                width: 2rem;
+                height: 2rem;
+                border-radius: 0.2rem;
+                transform: rotate(45deg);
+                background-color: white;
+                display: inline-block;
+                position: relative;
+                margin-right: 0.4rem;
+                margin-top: 60%;
+                
+                 
+                & img {
+                    transform: rotate(-45deg);
+                    width: 1.2rem;
+                    height: 1.1rem;
+                    margin: auto;
+                    display: block;
+                    position: absolute;
+                    top: 20%;
+                    left: 24%;
+                }
+            }
+        }
+        & li:nth-child(2) {
+            padding-bottom: 1rem;
+
+            
+            & p {
+                display:block;
+                margin: auto;
+                color: $grey-section;
+                font-weight: 700;
+                font-size: 1.3rem;
+                text-align: center;
+                padding-top: 3rem;
+            }
+           
+            & img {
+                display: inline-block;
+            }
+            & span{
+                color: black;
+            }
+           
+        }
+       
+
+        & a {
+           display: block;
+           margin: auto;
+           color: $grey-dark;
+           text-decoration:none;
+           position: relative;
+
+           &::before {
+            content: "";
+            display: inline-block;
+            background-image: url(../../img/massage.png);
+            background-size: cover;
+            width: 1.3rem;
+            height: 1.1rem;
+            top: 0.3rem;
+            position: relative;
+            right: 1rem;
+           }
+
+           &:hover {
+               color: $blue-light;
+           }
+           & span {
+               display: block;
+               margin: auto;
+               position: relative;
+
+               &::before {
+                content: "";
+                display: inline-block;
+                background-image: url(../../img/phone.png);
+                background-size: cover;
+                width: 1.2rem;
+                height: 1.2rem;
+                top: 0.3rem;
+                position: relative;
+                right: 1rem;
+               }
+           }
+        }
+    }
+}
+.span-color {
+    background-color: $grey-section !important;
+}

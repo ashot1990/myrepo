@@ -7,7 +7,7 @@
   border: 1px solid #dedede;
   text-transform: uppercase;
   border-radius: 0.4rem;
-  padding: 1rem 2.5rem;
+  padding: 1rem;
   display: block;
   margin: auto;
   color: #606060;
@@ -26,16 +26,16 @@
   .btn-center {
     position: absolute;
     border: none;
-    bottom: 20.7%;
-    transform: translate(16%, 0%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #00a99d;
     color: #f9f9f9; }
   .btn-top {
-    position: relative;
-    bottom: 1.7rem; }
-  .btn-bottom {
     position: absolute;
-    bottom: 0rem; }
+    bottom: 11rem; }
+  .btn-bottom {
+    position: absolute; }
 
 *,
 *::before,
@@ -143,7 +143,8 @@ body {
   width: 33.33%; }
 
 .col-4 {
-  width: 25%; }
+  width: 25%;
+  position: relative; }
 
 * {
   margin: 0;
@@ -172,15 +173,13 @@ body {
     margin: auto;
     height: 14rem; }
     .section__main--top-icon {
-      position: relative;
       width: 4rem;
       height: 4rem;
       border-radius: 0.2rem;
       transform: rotate(45deg);
       background-color: #00a99d;
-      left: 46%;
-      bottom: 2rem;
-      display: inline-block; }
+      display: block;
+      margin: auto; }
       .section__main--top-icon img {
         position: absolute;
         transform: translate(-50%, -33%);
@@ -295,233 +294,172 @@ body {
       width: 60%;
       margin: auto;
       text-align: center; }
-  .section__one--icon:nth-child(2) span {
-    background-color: #00a99d; }
-    .section__one--icon:nth-child(2) span ul li {
-      background-color: black; }
-  .section__one--icon:hover {
-    background-color: #f9f9f9; }
-  .section__one--icon span {
+
+.section__one--icon:nth-child(2) span {
+  background-color: #00a99d; }
+  .section__one--icon:nth-child(2) span ul li {
+    background-color: black; }
+
+.section__one--icon:hover {
+  background-color: #f9f9f9; }
+
+.section__one--icon span {
+  display: block;
+  position: relative;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  background-color: #383838;
+  margin: auto; }
+  .section__one--icon span img {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.section__one h3 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 1.5rem; }
+
+.section__one p {
+  color: #999;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-align: center;
+  padding-bottom: 2rem; }
+
+.section__two ul {
+  list-style: none;
+  text-align: center; }
+  .section__two ul li span {
+    font-size: 3rem;
+    color: #f9f9f9; }
+  .section__two ul li img {
+    width: 1.5rem;
+    height: 1.5rem;
     display: block;
-    position: relative;
-    border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
-    background-color: #383838;
     margin: auto; }
-    .section__one--icon span img {
-      width: 2rem;
-      height: 2rem;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-  .section__one h3 {
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    text-align: center;
-    margin-top: 1.5rem; }
-  .section__one p {
+  .section__two ul li p {
+    display: inline-block;
     color: #999;
     font-weight: 700;
     font-size: 1.3rem;
-    text-align: center; }
-  .section__two ul {
-    list-style: none;
-    text-align: center; }
-    .section__two ul li span {
-      font-size: 3rem;
-      color: #f9f9f9; }
-    .section__two ul li img {
-      width: 1.5rem;
-      height: 1.5rem;
-      display: block;
-      margin: auto; }
-    .section__two ul li p {
+    text-align: center;
+    position: relative;
+    top: 1rem; }
+    .section__two ul li p::before {
+      content: "";
       display: inline-block;
-      color: #999;
+      border-bottom: 1px solid #606060;
+      position: absolute;
+      width: 8.5rem;
+      right: 7.5rem;
+      bottom: 3.7rem; }
+    .section__two ul li p::after {
+      content: "";
+      display: inline-block;
+      border-bottom: 1px solid #606060;
+      position: absolute;
+      width: 8.5rem;
+      left: 7.5rem;
+      bottom: 3.7rem; }
+
+.section__three ul {
+  list-style: none;
+  text-align: center;
+  border: 1px solid #dedede;
+  border-radius: 0.4rem; }
+  .section__three ul .li-bg {
+    background-color: #00a99d !important; }
+  .section__three ul li:nth-child(1) {
+    height: 20rem;
+    background-color: #606060;
+    border-radius: 0.4rem 0.4rem 0 0; }
+    .section__three ul li:nth-child(1) span {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.2rem;
+      transform: rotate(45deg);
+      background-color: white;
+      display: inline-block;
+      position: relative;
+      margin-right: 0.4rem;
+      margin-top: 60%; }
+      .section__three ul li:nth-child(1) span img {
+        transform: rotate(-45deg);
+        width: 1.2rem;
+        height: 1.1rem;
+        margin: auto;
+        display: block;
+        position: absolute;
+        top: 20%;
+        left: 24%; }
+  .section__three ul li:nth-child(2) {
+    padding-bottom: 1rem; }
+    .section__three ul li:nth-child(2) p {
+      display: block;
+      margin: auto;
+      color: #383838;
       font-weight: 700;
       font-size: 1.3rem;
       text-align: center;
+      padding-top: 3rem; }
+    .section__three ul li:nth-child(2) img {
+      display: inline-block; }
+    .section__three ul li:nth-child(2) span {
+      color: black; }
+  .section__three ul a {
+    display: block;
+    margin: auto;
+    color: #606060;
+    text-decoration: none;
+    position: relative; }
+    .section__three ul a::before {
+      content: "";
+      display: inline-block;
+      background-image: url(../../img/massage.png);
+      background-size: cover;
+      width: 1.3rem;
+      height: 1.1rem;
+      top: 0.3rem;
       position: relative;
-      top: 1rem; }
-      .section__two ul li p::before {
-        content: "";
-        display: inline-block;
-        border-bottom: 1px solid #606060;
-        position: absolute;
-        width: 8.5rem;
-        right: 7.5rem;
-        bottom: 3.7rem; }
-      .section__two ul li p::after {
-        content: "";
-        display: inline-block;
-        border-bottom: 1px solid #606060;
-        position: absolute;
-        width: 8.5rem;
-        left: 7.5rem;
-        bottom: 3.7rem; }
-  .section__three ul {
-    list-style: none;
-    text-align: center; }
-    .section__three ul li:nth-child(1) {
-      height: 20rem;
-      background-color: #606060;
-      border-radius: 0.4rem 0.4rem 0 0; }
-      .section__three ul li:nth-child(1)--bg {
-        background-color: transparent !important; }
-      .section__three ul li:nth-child(1) span {
-        width: 2rem;
-        height: 2rem;
-        border-radius: 0.2rem;
-        transform: rotate(45deg);
-        background-color: white;
-        display: inline-block;
-        position: relative;
-        margin-right: 0.4rem;
-        margin-top: 60%; }
-        .section__three ul li:nth-child(1) span img {
-          transform: rotate(-45deg);
-          width: 1.2rem;
-          height: 1.1rem;
-          margin: auto;
-          display: block;
-          position: absolute;
-          top: 20%;
-          left: 24%; }
-    .section__three ul li:nth-child(2) {
-      background-color: #dedede;
-      border-radius: 0 0 0.4rem 0.4rem;
-      padding-bottom: 1rem; }
-      .section__three ul li:nth-child(2) p {
-        display: block;
-        margin: auto;
-        color: #383838;
-        font-weight: 700;
-        font-size: 1.3rem;
-        text-align: center;
-        padding-top: 3rem; }
-      .section__three ul li:nth-child(2) img {
-        display: inline-block; }
-      .section__three ul li:nth-child(2) span {
-        color: black; }
-    .section__three ul a {
+      right: 1rem; }
+    .section__three ul a:hover {
+      color: #00a99d; }
+    .section__three ul a span {
       display: block;
       margin: auto;
-      color: #606060;
-      text-decoration: none;
       position: relative; }
-      .section__three ul a::before {
+      .section__three ul a span::before {
         content: "";
         display: inline-block;
-        background-image: url(../../img/massage.png);
+        background-image: url(../../img/phone.png);
         background-size: cover;
-        width: 1.3rem;
-        height: 1.1rem;
+        width: 1.2rem;
+        height: 1.2rem;
         top: 0.3rem;
         position: relative;
         right: 1rem; }
-      .section__three ul a:hover {
-        color: #00a99d; }
-      .section__three ul a span {
-        display: block;
-        margin: auto;
-        position: relative; }
-        .section__three ul a span::before {
-          content: "";
-          display: inline-block;
-          background-image: url(../../img/phone.png);
-          background-size: cover;
-          width: 1.2rem;
-          height: 1.2rem;
-          top: 0.3rem;
-          position: relative;
-          right: 1rem; }
-  .section__four .ul-pos {
-    position: relative;
-    height: 10rem; }
-  .section__four ul li:nth-child(1) {
-    background-color: transparent !important;
-    border: 1px solid #dedede; }
-  .section__four ul {
-    list-style: none;
-    text-align: center; }
-    .section__four ul li:nth-child(1) {
-      background-color: #606060;
-      border-radius: 0.4rem 0.4rem 0 0;
-      position: relative; }
-      .section__four ul li:nth-child(1)--bg {
-        background-color: transparent !important; }
-      .section__four ul li:nth-child(1) span {
-        width: 2rem;
-        height: 2rem;
-        border-radius: 0.2rem;
-        transform: rotate(45deg);
-        background-color: white;
-        display: inline-block;
-        position: relative;
-        margin-right: 0.4rem;
-        margin-top: 60%; }
-        .section__four ul li:nth-child(1) span img {
-          transform: rotate(-45deg);
-          width: 1.2rem;
-          height: 1.1rem;
-          margin: auto;
-          display: block;
-          position: absolute;
-          top: 20%;
-          left: 24%; }
-    .section__four ul li:nth-child(2) {
-      background-color: #dedede;
-      border-radius: 0 0 0.4rem 0.4rem;
-      padding-bottom: 1rem; }
-      .section__four ul li:nth-child(2) p {
-        display: block;
-        margin: auto;
-        color: #383838;
-        font-weight: 700;
-        font-size: 1.3rem;
-        text-align: center;
-        padding-top: 3rem; }
-      .section__four ul li:nth-child(2) img {
-        display: inline-block; }
-      .section__four ul li:nth-child(2) span {
-        color: black; }
-    .section__four ul a {
-      display: block;
-      margin: auto;
-      color: #606060;
-      text-decoration: none;
-      position: relative; }
-      .section__four ul a::before {
-        content: "";
-        display: inline-block;
-        background-image: url(../../img/massage.png);
-        background-size: cover;
-        width: 1.3rem;
-        height: 1.1rem;
-        top: 0.3rem;
-        position: relative;
-        right: 1rem; }
-      .section__four ul a:hover {
-        color: #00a99d; }
-      .section__four ul a span {
-        display: block;
-        margin: auto;
-        position: relative; }
-        .section__four ul a span::before {
-          content: "";
-          display: inline-block;
-          background-image: url(../../img/phone.png);
-          background-size: cover;
-          width: 1.2rem;
-          height: 1.2rem;
-          top: 0.3rem;
-          position: relative;
-          right: 1rem; }
 
 .span-color {
   background-color: #383838 !important; }
+
+.section__four ul {
+  list-style: none;
+  text-align: center;
+  border: 1px solid #dedede;
+  border-radius: 0.4rem;
+  height: 35rem; }
+  .section__four ul li {
+    background-color: transparent !important;
+    padding: 0.5rem 0;
+    background-color: #606060;
+    border-radius: 0.4rem 0.4rem 0 0;
+    position: relative; }
 
 .number {
   display: inline-block;
@@ -555,3 +493,20 @@ body {
     position: absolute;
     bottom: 3rem;
     right: 5rem; }
+
+.section__five {
+  text-align: center; }
+  .section__five .header--logo {
+    position: unset;
+    margin-top: 4rem; }
+
+.icons-row {
+  position: relative;
+  max-width: 50%;
+  margin: auto;
+  text-align: center; }
+  .icons-row span {
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #f9f9f9;
+    border-radius: 0.2rem; }
