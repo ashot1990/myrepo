@@ -1,8 +1,9 @@
 .section {
     max-width: 100%;
     margin: auto;
-    width: auto;
+    // width: auto;
     padding-bottom: 5rem;
+   
 
     &--bg {
         background-color: $grey-section;
@@ -12,7 +13,6 @@
         max-width: 60%;
         margin: auto;
     }
-   
 
     &__main {
         margin: auto;
@@ -24,8 +24,8 @@
             border-radius: 0.2rem;
             transform: rotate(45deg);
             background-color: $blue-light;
-           
-            display: block;
+            position: relative;
+            bottom: 2rem;
             margin: auto;
 
             & img {
@@ -34,7 +34,6 @@
                 top: 17%;
                 left: 50%;
                 rotate: -45deg;
-
             }
         }
         & span {

@@ -1,5 +1,5 @@
 .section__three {
-
+        position: relative;
 
         
     & ul {
@@ -10,6 +10,14 @@
         
         & .li-bg{
             background-color: $blue-light !important;
+            position: relative;
+
+            &>div {
+               display: inline-flex;
+               -ms-wrap-flow: nowrap;
+               position: relative;
+               top: 10%;
+            }
         }
         & li:nth-child(1) {
             height: 20rem;

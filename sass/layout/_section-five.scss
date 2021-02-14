@@ -1,5 +1,7 @@
 .section__five {
     text-align: center;
+    position: relative;
+    // height: 16rem;
 
 
     & .header--logo{
@@ -9,14 +11,31 @@
 }
 
 .icons-row {
-    position: relative;
-    max-width: 50%;
-    margin: auto;
-    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+    
+
+    & span:nth-child(2) {
+        background-color: $blue-light;
+    }
     & span {
-        width: 4rem;
-        height: 4rem;
-        border: 1px solid $grey-light;
-        border-radius: 0.2rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        border: 1px solid $grey-dark;
+        border-radius: 0.4rem;
+        float: left;
+        position: relative;
+        margin: 0 0.2rem;
+
+        &:hover {
+            background-color: $blue-light;
+        }
+        & img {
+            @include absolute;
+
+        }
     }
 }

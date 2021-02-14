@@ -29,12 +29,18 @@
         background-color: $blue-light;
         color: $grey-light;
      
+        &-modf {
+            top: 65%;
+            width: 12rem;
+        }
     }
     &-top {
         position: absolute;
-        bottom:11rem;
+        top: auto;
+        width: 12rem;
     }
     &-bottom {
-        position: absolute;
+        width: 12rem;
+        top: 85%;
     }
 }

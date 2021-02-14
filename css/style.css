@@ -31,11 +31,16 @@
     transform: translate(-50%, -50%);
     background-color: #00a99d;
     color: #f9f9f9; }
+    .btn-center-modf {
+      top: 65%;
+      width: 12rem; }
   .btn-top {
     position: absolute;
-    bottom: 11rem; }
+    top: auto;
+    width: 12rem; }
   .btn-bottom {
-    position: absolute; }
+    width: 12rem;
+    top: 85%; }
 
 *,
 *::before,
@@ -161,7 +166,6 @@ body {
 .section {
   max-width: 100%;
   margin: auto;
-  width: auto;
   padding-bottom: 5rem; }
   .section--bg {
     background-color: #383838; }
@@ -178,7 +182,8 @@ body {
       border-radius: 0.2rem;
       transform: rotate(45deg);
       background-color: #00a99d;
-      display: block;
+      position: relative;
+      bottom: 2rem;
       margin: auto; }
       .section__main--top-icon img {
         position: absolute;
@@ -368,82 +373,90 @@ body {
       left: 7.5rem;
       bottom: 3.7rem; }
 
-.section__three ul {
-  list-style: none;
-  text-align: center;
-  border: 1px solid #dedede;
-  border-radius: 0.4rem; }
-  .section__three ul .li-bg {
-    background-color: #00a99d !important; }
-  .section__three ul li:nth-child(1) {
-    height: 20rem;
-    background-color: #606060;
-    border-radius: 0.4rem 0.4rem 0 0; }
-    .section__three ul li:nth-child(1) span {
-      width: 2rem;
-      height: 2rem;
-      border-radius: 0.2rem;
-      transform: rotate(45deg);
-      background-color: white;
-      display: inline-block;
-      position: relative;
-      margin-right: 0.4rem;
-      margin-top: 60%; }
-      .section__three ul li:nth-child(1) span img {
-        transform: rotate(-45deg);
-        width: 1.2rem;
-        height: 1.1rem;
-        margin: auto;
-        display: block;
-        position: absolute;
-        top: 20%;
-        left: 24%; }
-  .section__three ul li:nth-child(2) {
-    padding-bottom: 1rem; }
-    .section__three ul li:nth-child(2) p {
-      display: block;
-      margin: auto;
-      color: #383838;
-      font-weight: 700;
-      font-size: 1.3rem;
-      text-align: center;
-      padding-top: 3rem; }
-    .section__three ul li:nth-child(2) img {
-      display: inline-block; }
-    .section__three ul li:nth-child(2) span {
-      color: black; }
-  .section__three ul a {
-    display: block;
-    margin: auto;
-    color: #606060;
-    text-decoration: none;
-    position: relative; }
-    .section__three ul a::before {
-      content: "";
-      display: inline-block;
-      background-image: url(../../img/massage.png);
-      background-size: cover;
-      width: 1.3rem;
-      height: 1.1rem;
-      top: 0.3rem;
-      position: relative;
-      right: 1rem; }
-    .section__three ul a:hover {
-      color: #00a99d; }
-    .section__three ul a span {
-      display: block;
-      margin: auto;
+.section__three {
+  position: relative; }
+  .section__three ul {
+    list-style: none;
+    text-align: center;
+    border: 1px solid #dedede;
+    border-radius: 0.4rem; }
+    .section__three ul .li-bg {
+      background-color: #00a99d !important;
       position: relative; }
-      .section__three ul a span::before {
+      .section__three ul .li-bg > div {
+        display: inline-flex;
+        -ms-wrap-flow: nowrap;
+        position: relative;
+        top: 10%; }
+    .section__three ul li:nth-child(1) {
+      height: 20rem;
+      background-color: #606060;
+      border-radius: 0.4rem 0.4rem 0 0; }
+      .section__three ul li:nth-child(1) span {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.2rem;
+        transform: rotate(45deg);
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        margin-right: 0.4rem;
+        margin-top: 60%; }
+        .section__three ul li:nth-child(1) span img {
+          transform: rotate(-45deg);
+          width: 1.2rem;
+          height: 1.1rem;
+          margin: auto;
+          display: block;
+          position: absolute;
+          top: 20%;
+          left: 24%; }
+    .section__three ul li:nth-child(2) {
+      padding-bottom: 1rem; }
+      .section__three ul li:nth-child(2) p {
+        display: block;
+        margin: auto;
+        color: #383838;
+        font-weight: 700;
+        font-size: 1.3rem;
+        text-align: center;
+        padding-top: 3rem; }
+      .section__three ul li:nth-child(2) img {
+        display: inline-block; }
+      .section__three ul li:nth-child(2) span {
+        color: black; }
+    .section__three ul a {
+      display: block;
+      margin: auto;
+      color: #606060;
+      text-decoration: none;
+      position: relative; }
+      .section__three ul a::before {
         content: "";
         display: inline-block;
-        background-image: url(../../img/phone.png);
+        background-image: url(../../img/massage.png);
         background-size: cover;
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1.3rem;
+        height: 1.1rem;
         top: 0.3rem;
         position: relative;
         right: 1rem; }
+      .section__three ul a:hover {
+        color: #00a99d; }
+      .section__three ul a span {
+        display: block;
+        margin: auto;
+        position: relative; }
+        .section__three ul a span::before {
+          content: "";
+          display: inline-block;
+          background-image: url(../../img/phone.png);
+          background-size: cover;
+          width: 1.2rem;
+          height: 1.2rem;
+          top: 0.3rem;
+          position: relative;
+          right: 1rem; }
 
 .span-color {
   background-color: #383838 !important; }
@@ -495,18 +508,87 @@ body {
     right: 5rem; }
 
 .section__five {
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   .section__five .header--logo {
     position: unset;
     margin-top: 4rem; }
 
 .icons-row {
-  position: relative;
-  max-width: 50%;
-  margin: auto;
-  text-align: center; }
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6rem; }
+  .icons-row span:nth-child(2) {
+    background-color: #00a99d; }
   .icons-row span {
-    width: 4rem;
-    height: 4rem;
-    border: 1px solid #f9f9f9;
-    border-radius: 0.2rem; }
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid #606060;
+    border-radius: 0.4rem;
+    float: left;
+    position: relative;
+    margin: 0 0.2rem; }
+    .icons-row span:hover {
+      background-color: #00a99d; }
+    .icons-row span img {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%; }
+
+footer {
+  position: relative; }
+
+.footer-map {
+  position: relative;
+  padding-top: 6rem; }
+
+.footer-img {
+  width: 100%;
+  background-size: cover; }
+
+input[type=text] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin: 1rem auto;
+  width: 100%; }
+
+input[type=submit] {
+  background-color: #00a99d;
+  color: #f9f9f9;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin: 0.5rem 0; }
+  input[type=submit]:hover {
+    background-color: #03bdb0; }
+
+textarea {
+  width: 100%; }
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  width: 17%;
+  position: absolute;
+  left: 20%;
+  top: 30%; }
+
+form {
+  display: block;
+  width: 90%;
+  margin: auto; }
+
+footer p {
+  display: inline-block;
+  color: #f9f9f9;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0%; }
