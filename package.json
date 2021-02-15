@@ -1,7 +1,7 @@
 {
   "name": "startuprr",
   "version": "1.0.0",
-  "description": "",
+  "description": "<!--\r *** Thanks for checking out the Best-README-Template. If you have a suggestion\r *** that would make this better, please fork the repo and create a pull request\r *** or simply open an issue with the tag \"enhancement\".\r *** Thanks again! Now go create something AMAZING! :D\r -->",
   "main": "index.js",
   "scripts": {
     "test": "node-sass sass/main.scss css/style.css -w -s"
@@ -11,5 +11,13 @@
   "devDependencies": {
     "node-sass": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashot1990/myremo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ashot1990/myremo/issues"
+  },
+  "homepage": "https://github.com/ashot1990/myremo#readme"
 }

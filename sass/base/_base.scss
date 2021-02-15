@@ -6,8 +6,29 @@
     box-sizing: inherit;
 }
 html {
+    // this defines what 1 rem is
     font-size: 62.5%;
+
+    @include respond(tab-land) {
+        font-size: 56.25%;  // from 70% --> 1rem = 9px, 8/16 = 50%
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;  // from 60% --> 1rem = 8px, 8/16 = 50%
+    }
+    @include respond(phone) {
+        font-size: 50%;
+    }
+    @include respond(phone) {
+        font-size: 30%; // 1rem = 4.8px, 
+    }
+    @include respond(big-desktop) {
+        font-size: 75%;  // from 80% --> 1rem = 12px, 12/16 = 75%
+    }
+
 }
 body {
     font-family: "Arial", sans-serif;
 }
+
+

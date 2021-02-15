@@ -10,8 +10,11 @@
        max-width: 60%;
        margin: auto;
        z-index: 100;
-    }
 
+       @include respond(tab-land) {
+         
+       }
+   }
     &--logo {
         display: inline-block;
        position: absolute;

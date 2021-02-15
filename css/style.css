@@ -3,6 +3,25 @@
   display: table;
   clear: both; }
 
+/* breakpoint argument choices:
+
+0 - 600px:  phone
+
+600px - 900px: Tablet Portrait
+
+900 - 1200px: Tablet Landscape
+
+[1200 - 1800] is where our normal styles apply
+
+
+- phone
+- tab-port 
+- tab-land
+- big-desktop
+
+1em = 16px
+
+*/
 .btn {
   border: 1px solid #dedede;
   text-transform: uppercase;
@@ -51,6 +70,21 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 81.25em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (max-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: "Arial", sans-serif; }
